@@ -6,6 +6,41 @@
         html{
           background: #262626;
         }
+        .newsname{
+          width:80%;
+          margin-left: 2.5%;
+          margin-right: 2.5%;
+        }
+        #wrapper {
+            width: 100%;
+            overflow: auto; /* so the size of the wrapper is alway the size of the longest content */
+        }
+        #first {
+            float: left;
+            width: 44%;
+            margin-left: 2.5%;
+            margin-right:2.5%;
+        }
+        #second {
+            margin-left: 2.5%;
+            margin-right:2.5%;
+            width: 44%;
+            float:left;
+        }
+        .newshead{
+            font-family: Futura, "Trebuchet MS";
+            font-size: 70px;
+            color:white;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+            text-align: center;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+          }
       </style>
       <script>
         function loadNews(){
@@ -15,9 +50,7 @@
               var newsjson = JSON.parse(this.responseText);
               for(var i=0; i<newsjson.articles.length-1; ++i){
                 //if(newsjson.articles[i].source.name=="TechCrunch"){
-                 arts= newsjson.articles[i].title;
-                 document.getElementById("vergenews").innerHTML += "<div class='art-boxed'>" + newsjson.articles[i].title +"</div> <br>";
-
+                 document.getElementById("vergenews").innerHTML += "<br><div class='art-boxed'><a href=" + newsjson.articles[i].url +">" + newsjson.articles[i].title +"</a></div>";
                 //}
               }
             }
@@ -32,9 +65,7 @@
               var newsjson = JSON.parse(this.responseText);
               for(var i=0; i<newsjson.articles.length-1; ++i){
                 //if(newsjson.articles[i].source.name=="TechCrunch"){
-                 arts= newsjson.articles[i].title;
-                 document.getElementById("polygonnews").innerHTML += "<div class='art-boxed'>" + newsjson.articles[i].title +"</div> <br>";
-
+                 document.getElementById("polygonnews").innerHTML += "<br><div class='art-boxed'><a href=" + newsjson.articles[i].url +">" + newsjson.articles[i].title +"</a></div>";
                 //}
               }
             }
@@ -67,11 +98,15 @@
     </head>
 
     <body onload="javascript:loadNews()">
-      <h1 style="margin:auto; font-size:70px; color:white">Tech & Gaming News:</h1>
+      <h1 class="newshead" style="">Tech & Gaming News:</h1>
+      <div id = "first">
       <h2 style="color:white;">The Verge News:</h2>
-      <div id="vergenews"></div>
-      <hr style="margin-top:85px; color:white">
-      <h2 style="color:white;">Polygon News</h2>
-      <div id="polygonnews"></div>
+        <div class="newsname" id="vergenews"></div>
+      </div>
+
+      <div id="second">
+      <h2 style="color:white;">Polygon News:</h2>
+      <div class="newsname" id="polygonnews"></div>
+    </div>
     </body>
 </html>

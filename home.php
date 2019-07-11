@@ -83,7 +83,7 @@
           <a href = "tetris.php">
           <div class="numbertext">3 / 3</div>
           <img src="i2.jpg" style="width:80%; height:1000px">
-          <div class="text" style = "color:White">Hardcore Tetris</div>
+          <div class="text" style = "color:White">Tetris</div>
           </a>
         </div>
 

@@ -26,7 +26,7 @@
 
   function tick() {
     var newHead = {x: snake[0].x, y: snake[0].y};
-    
+
     window.addEventListener("keydown", function(e) {
         // space and arrow keys
         if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
@@ -59,7 +59,7 @@
       context.fillStyle = '#eee8d5';
       context.font = '40px serif';
       context.textAlign = 'center';
-      context.fillText('Refresh to play again', SIZE / 2, SIZE / 2);
+      context.fillText('Press the button to save score and play again', SIZE / 2, SIZE / 2);
     } else {
       snake.unshift(newHead); // Add the new head to the front
       snake = snake.slice(0, snakeLength); // Enforce the snake's max length

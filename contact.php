@@ -19,7 +19,7 @@
         table{
           width: 600px;
           border: 15px solid white;
-          padding: 50px;
+          padding: 15px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
@@ -106,6 +106,23 @@
   background-color: #555;
 }
 
+#wrapper {
+    width: 100%;
+    overflow: auto; /* so the size of the wrapper is alway the size of the longest content */
+}
+#first {
+    float: left;
+    width: 44%;
+    margin-left: 2.5%;
+    margin-right:2.5%;
+}
+#second {
+    margin-left: 2.5%;
+    margin-right:2.5%;
+    width: 44%;
+    float:left;
+}
+
       </style>
 
 
@@ -136,31 +153,33 @@
         About Us
       </td>
     </table>
-    <div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="img2.jpg" alt="Victor Polisetty" style="width:20%">
-      <div class="container">
-        <h2>Victor Polisetty</h2>
-        <p class="title">Student (12th Grade)</p>
-        <p>Currently attending Ponte Vedra High School, Victor Polisetty plans to attend a top 20 university majoring in Computer Science</p>
-        <p>Feel free to contact me: victorpolisetty@gmail.com</p>
+    <br>
+    <div id="wrapper">
+      <div id= "first">
+          <div class="card">
+            <img src="img2.jpg" alt="Victor Polisetty" style="width:45%; height: 300px;">
+            <div class="container">
+              <h2>Victor Polisetty</h2>
+              <p class="title">Student (12th Grade)</p>
+              <p>Currently attending Ponte Vedra High School, Victor Polisetty plans to attend a top 20 university majoring in Computer Science</p>
+              <p>Feel free to contact me: victorpolisetty@gmail.com</p>
+            </div>
+          </div>
+      </div>
+
+      <div id="second">
+          <div class="card">
+            <img src="img3.jpg" alt="Sonu Venu" style="width:45%; height: 300px;">
+            <div class="container">
+              <h2>Sonu Venu</h2>
+              <p class="title">Student (12th Grade)</p>
+              <p>Currently attending Ponte Vedra High School, Sonu Venu plans to attend the University of Florida and major in the field of AI and Deep Learning</p>
+              <p>Feel free to contact me: sonu.venu@gmail.com</p>
+            </div>
+          </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="column">
-    <div class="card">
-      <img src="img3.jpg" alt="Sonu Venu" style="width:20%">
-      <div class="container">
-        <h2>Sonu Venu</h2>
-        <p class="title">Student (12th Grade)</p>
-        <p>Currently attending Ponte Vedra High School, Sonu Venu plans to attend the University of Florida and is currently undecided on his major</p>
-        <p>Feel free to contact me: sonu.venu@gmail.com</p>
-      </div>
-    </div>
-  </div>
-</div>
   </body>
 </html>
